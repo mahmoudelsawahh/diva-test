@@ -13,7 +13,7 @@ async function getArticleData() {
   }
 
 export default async function generateRssFeed() {
-const site_url = 'https://divanice.com';
+const site_url = 'https://diva-test.vercel.app/';
 
  const posts = await getArticleData();
 
