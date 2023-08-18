@@ -1,6 +1,4 @@
 import dynamic from 'next/dynamic';
-import generateRssFeed from '@/utils/generateRSSFeed';
-import generateGallerySitemap from '@/utils/generateGallerySitemap';
 const MainSlider = dynamic(() => import('./components/MainSlider'),{
   ssr : false,
 });
@@ -17,7 +15,7 @@ const MainPage = dynamic(() => import('./components/MainPage'),{
   ssr : false,
 });
 
-export default async function Home () {
+export default  function Home () {
   return (
     <>
           <MainSlider/>
