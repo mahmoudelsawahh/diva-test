@@ -18,8 +18,8 @@ const MainPage = dynamic(() => import('./components/MainPage'),{
 });
 
 export default async function Home () {
-  await generateRssFeed();
-  await generateGallerySitemap()
+  // await generateRssFeed();
+  // await generateGallerySitemap()
   return (
     <>
           <MainSlider/>
