@@ -1,5 +1,8 @@
 import { getArticleData, getCategoryData } from "./lib/DataFetching";
 
+
+
+
 export default async function sitemap(){
     const baseUrl = "http://divanice.com";
     const posts = await getArticleData();
@@ -51,7 +54,7 @@ export default async function sitemap(){
             lastModified: new Date(),
           },
         ...postsUrl,
-        // ...categoryUrl,
+        ...categoryUrl,
 
     ]
 }

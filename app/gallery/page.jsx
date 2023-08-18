@@ -15,13 +15,13 @@ export const metadata = {
   title: "اتيليه فساتين زفاف وافراح",
 }
 export default async  function Gallery () {
-  // const data = await getCategoryData()
+  const data = await getCategoryData()
   return (
        <>
         <main>
-        {/* <Suspense fallback={<Loading/>}>
+        <Suspense fallback={<Loading/>}>
             <AllCategory CategoryData={data.data}/>
-       </Suspense> */}
+       </Suspense>
         </main>
         <footer>
            <Footer/>
