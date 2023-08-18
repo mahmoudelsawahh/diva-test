@@ -3,7 +3,7 @@ import RSS from 'rss';
 
 
 async function getArticleData() {
-    const res = await fetch(`https://api.divanice.com/rest/tables.article/getAllPosts`,{
+    const res = await fetch(`https://api.divanice.com/rest/tables.article/getArticlesPojo`,{
       cache : 'no-store',
       headers : {
         'Content-Type': 'application/json',
@@ -28,12 +28,12 @@ const site_url = 'https://divanice.com';
         title: item.name,
         description: item.name,
         site_url: site_url,
-        feed_url: `${site_url}/rss-1.xml`,
+        feed_url: `${site_url}/rss.xml`,
         pubDate: new Date(),
         copyright: `All rights reserved ${new Date().getFullYear()}, Ibas`,
     })
   })
 
- fs.writeFileSync('./public/rss-1.xml', feed.xml({ indent: true }));
+ fs.writeFileSync('./public/rss.xml', feed.xml({ indent: true }));
 
 }

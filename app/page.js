@@ -1,6 +1,6 @@
-import generateBlogSitemap from '@/utils/generateBlogSitemap';
-import generateGallerySitemap from '@/utils/generateGallerySitemap';
 import dynamic from 'next/dynamic';
+import generateRssFeed from '@/utils/generateRSSFeed';
+import generateGallerySitemap from '@/utils/generateGallerySitemap';
 const MainSlider = dynamic(() => import('./components/MainSlider'),{
   ssr : false,
 });
@@ -18,7 +18,7 @@ const MainPage = dynamic(() => import('./components/MainPage'),{
 });
 
 export default async function Home () {
-  await generateBlogSitemap();
+  await generateRssFeed();
   await generateGallerySitemap()
   return (
     <>
