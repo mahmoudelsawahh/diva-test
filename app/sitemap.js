@@ -51,7 +51,7 @@ export default async function sitemap(){
             lastModified: new Date(),
           },
         ...postsUrl,
-        ...categoryUrl,
+        // ...categoryUrl,
 
     ]
 }
